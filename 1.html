@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Authentication</title>
+    <link rel="stylesheet" href="1.css">
+    <!-- Firebase SDKs -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js"></script>
+
+    <!-- Your custom script -->
+    <script type="module" src="3.js" defer></script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        div {
+            margin: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 100px;
+        }
+        .message {
+            background-color: #e0e0e0;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .message span {
+            font-size: 0.8em;
+            color: #888;
+        }
+        #signoutButton {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Signup Form -->
+    <div>
+        <h2>Sign Up</h2>
+        <input type="email" id="signupUsername" placeholder="Enter Email">
+        <input type="password" id="signupPassword" placeholder="Enter Password">
+        <button id="signupButton">Sign Up</button>
+    </div>
+
+    <!-- Sign In Form -->
+    <div>
+        <h2>Sign In</h2>
+        <input type="email" id="signinUsername" placeholder="Enter Email">
+        <input type="password" id="signinPassword" placeholder="Enter Password">
+        <button id="signinButton">Sign In</button>
+    </div>
+
+    <!-- Password Reset Form -->
+    <div>
+        <h2>Forgot Password</h2>
+        <input type="email" id="resetEmail" placeholder="Enter Email to Reset Password">
+        <button id="resetPasswordButton">Reset Password</button>
+    </div>
+
+    <!-- Post Message Section -->
+    <div>
+        <h2>Post Message</h2>
+        <textarea id="send-msg" placeholder="Enter message"></textarea>
+        <button id="postMessageButton">Post Message</button>
+    </div>
+
+    <!-- Message List Section -->
+    <div>
+        <h2>Messages</h2>
+        <div id="message-list"></div>
+    </div>
+
+    <!-- Sign Out Button -->
+    <div>
+        <button id="signoutButton">Sign Out</button>
+    </div>
+
+</body>
+</html>
